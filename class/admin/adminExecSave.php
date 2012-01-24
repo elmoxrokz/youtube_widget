@@ -18,7 +18,7 @@ class adminExecSave extends Controller_AdminExec
 		}
        	usbuilder()->message('Saved succesfully', 'success');
        	
-		$sUrl = usbuilder()->getUrl('adminPageSetup');
+		$sUrl = usbuilder()->getUrl('adminPageSetting');
         $sJsMove = usbuilder()->jsMove($sUrl);
         $this->writeJS($sJsMove);
 		

@@ -8,15 +8,13 @@ class frontPageyoutubewidget extends Controller_front
 		
 		$sInitScript = usbuilder()->init($this->Request->getAppID(), $aArgs);
 		$this->writeJs($sInitScript);
-		
-		
 		$this->importCSS('youtubewidget.front');
 		$this->importJS('defaultFront');
 		$modelSettings = new modelSettings();
 		$youtubexml = new youtubexml();
 
 		$this->display($aArgs,$modelSettings,$youtubexml);
-	
+		
 	}
 
 	public function display($aArgs,$modelSettings,$youtubexml)
@@ -85,13 +83,11 @@ class frontPageyoutubewidget extends Controller_front
 		}
 
 		$aList = $youtubexml->videoList($sCategory, $fStndrd);
-	
-$sHtml .= '<div id="pg_simpleyoutube_wrap" style="width:280px;">
 		
-			<div class="pg_simpleyoutube_h_inner">
-			<p class="pg_simpleyoutube_header"><span>Simple Youtube</span></p>
-			</div>
 		
+$sHtml .= '				
+
+		<div id="pg_simpleyoutube_holder">
 			<div class="pg_simpleyoutube_maincontent">
 				<ul class="pg_simpleyoutube_tabs">';
 		
@@ -101,8 +97,8 @@ $sHtml .= '<div id="pg_simpleyoutube_wrap" style="width:280px;">
 				
 				$sHtml .= '</ul>
 				
-				<div class="pg_simpleyoutube_list">';
-					'<ul class="pg_simpleyoutube_popular">';
+				<div class="pg_simpleyoutube_list">
+					<ul class="pg_simpleyoutube_popular">';
 					if(count($aList) > 0){
 						foreach($aList as $key => $val)
 						{
@@ -110,8 +106,7 @@ $sHtml .= '<div id="pg_simpleyoutube_wrap" style="width:280px;">
 							$sHtml .= '<li class="pg_simpleyoutube_item">
 							<div class="pg_simpleyoutube_preview"><a href="'.$val['watch'].'" target="_blank"><img src="'.$val['thumbnail'].'" alt="thumbnail" width="108" height="65"/><p class="pg_sy_time">'.$val['length'].'</p></a></div>
 							<p class="pg_simpleyoutube_item_title"><a href="'.$val['watch'].'" >'.$val['title'].'</a></p>
-							<p class="pg_simpleyoutube_item_author">by'.$val['author'].' </p>
-							
+							<p class="pg_simpleyoutube_item_author">by'.$val['author'].'</p>	
 							<p class="pg_simpleyoutube_item_views"> '.$val['views'].' views</p>
 							</li>';
 						}
@@ -126,11 +121,12 @@ $sHtml .= '<div id="pg_simpleyoutube_wrap" style="width:280px;">
 					<input type="hidden" name="pg_simpleyoutube_ctgry_category" id="pg_simpleyoutube_ctgry_category" value="'.$sCtgry.'" />
 				</div>
 			</div>
+  
+</div>					
+					';
 
-		</div>';
-			
+					
 		$this->assign('youtubewidget',$sHtml);
-
 	}
 	
 }

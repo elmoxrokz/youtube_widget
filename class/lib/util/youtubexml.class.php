@@ -76,10 +76,10 @@ class youtubexml
 			}
 
 			$sTitle = strval($media->group->title);
-			$sTitle = strlen($sTitle) > 25 ? substr($sTitle, 0, 22) . "..." : $sTitle;
+			//$sTitle = strlen($sTitle) > 25 ? substr($sTitle, 0, 22) . "..." : $sTitle;
 
 			$sAuthor = strval($entry->author->name);
-			$sAuthor = strlen($sAuthor) > 15 ? substr($sAuthor,0, 12) . "..." : $sAuthor;
+			//$sAuthor = strlen($sAuthor) > 15 ? substr($sAuthor,0, 12) . "..." : $sAuthor;
 			
 			$iLength = intval($iLength);
 			$iMins = floor($iLength / 60);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <adminmenus>
-    <menu name="youtubewidget" param="YoutubewidgetPageSetup">
-    	<page lang="youtubewidget" param="YoutubewidgetPageSetup" /> 
+    <menu name="youtubewidget" param="YoutubewidgetPageSetting">
+    	<page lang="youtubewidget" param="YoutubewidgetPageSetting" /> 
     </menu>
 </adminmenus>
