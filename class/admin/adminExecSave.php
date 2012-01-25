@@ -9,19 +9,22 @@ class adminExecSave extends Controller_AdminExec
 		$this->writeJs($sInitScript);
 		$getModel = new modelSettings();
 	
-		
 		if($getModel->getCountDb() == 0){
-		$getModel->execSave($aArgs);
+			$result = $getModel->execSave($aArgs);
 		}else{
-		$getModel->execDelete();	
-		$getModel->execSave($aArgs);
+			$getModel->execDelete();	
+			$result = $getModel->execSave($aArgs);
 		}
-       	usbuilder()->message('Saved succesfully', 'success');
-       	
+			
+		if($result !== false){
+       		usbuilder()->message('Saved succesfully', 'success');
+		}else{
+			usbuilder()->message('Save failed','warning');	
+		}
+      
 		$sUrl = usbuilder()->getUrl('adminPageSetting');
         $sJsMove = usbuilder()->jsMove($sUrl);
-        $this->writeJS($sJsMove);
-		
+        $this->writeJS($sJsMove);	
 	}
 	
 }

@@ -42,8 +42,6 @@ var adminPageSetup = {
 		
 		$('#pg_simpleyoutube_hidden_order').val(ordr);
 		$('#youtubewidgetSave').submit();
-	
-		
 
 	},
 	

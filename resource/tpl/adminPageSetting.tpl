@@ -11,7 +11,7 @@
 					
 						<select name="pg_simpleyoutube_cat_sel" id="pg_simpleyoutube_cat_sel">
 							<?php foreach($aList as $key => $val){?>
-							<option value="<?php echo $val[term]?>" <?php if($sCategory == $val[term]){echo "selected";}?>><?php echo $val[term]?></option>
+							<option value="<?php echo $val[term]?>" <?php if($sCategory == $val[term]){echo "selected";}?>><?php echo $val[label]?></option>
 							<?php }?>
 						</select>
 					</div>

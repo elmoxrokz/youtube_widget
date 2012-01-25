@@ -16,10 +16,12 @@ class youtubexml
 		$categories = $oXML->xpath('//atom:category');
     
 		foreach ($categories as $c) {
-			$aCategories[] = array(
-				'term' => $c['term'],
-				'label' => $c['label']
-			);
+			if($c['term'] != "Games"){
+				$aCategories[] = array(
+					'term' => $c['term'],
+					'label' => $c['label']
+				);
+			}
 		}
 
 		return $aCategories;
@@ -76,10 +78,10 @@ class youtubexml
 			}
 
 			$sTitle = strval($media->group->title);
-			//$sTitle = strlen($sTitle) > 25 ? substr($sTitle, 0, 22) . "..." : $sTitle;
+			$sTitle2 = strlen($sTitle) > 25 ? substr($sTitle, 0, 22) . "..." : $sTitle;
 
 			$sAuthor = strval($entry->author->name);
-			//$sAuthor = strlen($sAuthor) > 15 ? substr($sAuthor,0, 12) . "..." : $sAuthor;
+			$sAuthor2 = strlen($sAuthor) > 15 ? substr($sAuthor,0, 12) . "..." : $sAuthor;
 			
 			$iLength = intval($iLength);
 			$iMins = floor($iLength / 60);
@@ -90,6 +92,8 @@ class youtubexml
 			$aRecent[] = array(
 				'title' => $sTitle,
 				'author' => $sAuthor,
+				'title2' => $sTitle2,
+				'author2' => $sAuthor2,
 				'description' => strval($media->group->description),
 				'watch' => strval($sWatch),
 				'thumbnail' => strval($sThumbnail),			
