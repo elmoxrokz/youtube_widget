@@ -1,5 +1,5 @@
 <?php
-class frontPageyoutubeTest extends Controller_front
+class frontpageNorecord extends Controller_front
 {
 	protected function run($aArgs)
 	{
@@ -29,7 +29,11 @@ class frontPageyoutubeTest extends Controller_front
 			$sOrder = "latest,popular,category";
 		}
 		
+		
+	
 		$_aOrder = explode(",", $sOrder);
+		
+		
 		$sMode = $_aOrder[0];
 		
 		switch($sMode) {
@@ -48,18 +52,12 @@ class frontPageyoutubeTest extends Controller_front
 		
 		
 		 $aList =  $youtubexml->videoList($sCategory, $fStndrd);
-		
-		
-		 $this->loopFetch($aList);
-		 
-		if(count($aList) <= 0){
-		
+
+		if(count($aList) > 0){
 			$this->fetchClear();
 		}
 		
 		
-		
-	
 		
 	
 	}

@@ -48,7 +48,7 @@ var adminPageSetup = {
 	resetDefault : function()
 	{
 		$('#pg_simpleyoutube_tpl_1_radio').attr('checked', true);
-		$('#pg_simpleyoutube_cat_sel option:nth-child(19)').attr('selected', true);
+		$('#pg_simpleyoutube_cat_sel option:eq(17)').attr('selected', true);
 
 		$('#show_html_value option:nth-child(1)').val("latest").html("Most Recent");
 		$('#show_html_value option:nth-child(2)').val("popular").html("Most Popular");
