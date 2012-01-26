@@ -28,7 +28,7 @@ class adminPageSetting extends Controller_Admin
 
 		$aList = $youtubexml->categoryList();
 		$iCount = $modelSettings->getCountDb();
-	
+		
 		$aSetting = $modelSettings->getSetting();
 		
 		if($iCount > 0) {
@@ -69,7 +69,6 @@ class adminPageSetting extends Controller_Admin
 		$this->assign('aList', $aList);
 		$this->assign('sCategory', $sCategory);
 		$this->assign('aOrder', $aOrder);
-		
 		$this->assign('aCount',$iCount);
 		
 		

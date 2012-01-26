@@ -60,7 +60,7 @@ var adminPageSetup = {
 };
 
 $(document).ready(function(){
-	
+	/*
 	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
 	if(hashes == "showSaveBar=true"){
 	$('.msg_suc_box').show().delay(3000).fadeOut('slow', function(){ $('#WRAP_Simpleyoutube').resizeIframe();});
@@ -69,6 +69,6 @@ $(document).ready(function(){
 	$('.class_sort').click(function()	{
 	return false;
 	});
-	
+	*/
 
 });
