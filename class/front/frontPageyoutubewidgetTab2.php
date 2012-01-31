@@ -10,7 +10,7 @@ class frontPageyoutubewidgetTab2 extends Controller_front
 		$this->writeJs($sInitScript);
 		
 		$this->importCSS('youtubewidget.front');
-		//$this->importJS('defaultTest');
+		
 		$modelSettings = new modelSettings();
 		$youtubexml = new youtubexml();
 		
@@ -21,7 +21,7 @@ class frontPageyoutubewidgetTab2 extends Controller_front
 		$aList2 =  $youtubexml->videoList('most_popular', true);
 			
 				
-		 $this->loopFetch($aList2);
+		$this->loopFetch($aList2);
 		 
 		if(count($aList2) <= 0){
 		

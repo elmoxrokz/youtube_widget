@@ -10,7 +10,6 @@ class frontpageNorecord extends Controller_front
 		$this->writeJs($sInitScript);
 		
 		$this->importCSS('youtubewidget.front');
-		$this->importJS('defaultTest');
 		$modelSettings = new modelSettings();
 		$youtubexml = new youtubexml();
 		

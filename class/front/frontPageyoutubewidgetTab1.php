@@ -8,9 +8,9 @@ class frontPageyoutubewidgetTab1 extends Controller_front
 	
 		$sInitScript = usbuilder()->init($this->Request->getAppID(), $aArgs);
 		$this->writeJs($sInitScript);
-		
+				
 		$this->importCSS('youtubewidget.front');
-		//$this->importJS('defaultTest');
+
 		$modelSettings = new modelSettings();
 		$youtubexml = new youtubexml();
 		
