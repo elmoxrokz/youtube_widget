@@ -1,4 +1,8 @@
 ﻿@charset "utf-8";
+#pg_simpleyoutube_wrap {position:relative;height:1000px !important;}
+
+#pg_simpleyoutube_holder * {margin:0;padding:0}
+#pg_simpleyoutube_holder {width:100%;zoom:1;padding-left:2px;position:relative;}
 
 /* Navigation */
 #pg_simpleyoutube_holder ul.pg_simpleyoutube_tabs {width:100%;display:inline-block;}
@@ -10,7 +14,9 @@
 #pg_simpleyoutube_holder ul.pg_simpleyoutube_tabs li a span, #pg_simpleyoutube_holder ul.pg_simpleyoutube_tabs li a:hover span {width:79px;height:20px;line-height:20px;display:inline-block;}
 
 /* list */
-#pg_simpleyoutube_holder .pg_simpleyoutube_list {width:100%;height:262px;margin-top:15px !important;overflow-y:auto;overflow-x:hidden;position:relative;display:inline-block;}
+
+#pg_simpleyoutube_holder .pg_simpleyoutube_list {width:100%;margin-top:15px !important;overflow-y:auto;overflow-x:hidden;position:relative;display:inline-block;}
+
 
 /* list items */
 #pg_simpleyoutube_holder ul.pg_simpleyoutube_popular {width:100%;margin-left:0px;display:inline-block;height:273px}
@@ -29,8 +35,7 @@
 
 /*============ Wrap =============*/
 
-#pg_simpleyoutube_holder * {margin:0;padding:0}
-#pg_simpleyoutube_holder {width:100%;zoom:1;padding-left:2px;}
+
 
 /* ajax loader image */
 #pg_sy_ajaxloader {width:100%;display:inline-block;text-align:center}

@@ -29,10 +29,10 @@
 					</div>	
 					<div class="content">
 						<select title="select tab" class="tab" id="show_html_value" size="4">
-						<?php $i = 0; foreach($aOrder as $val){  ?>
+						<?php $i = 0; foreach($aOrder as $val){ ?>
 															<option id="optyoutubewidget_<?php echo $i; ?>" value="<?php echo $val[alt]?>"><?php echo $val[text] ?></option>	
 															
-							<?php $i++; }?>	
+							<?php $i++; };?>	
 													</select>
 					</div>
 				</td>
